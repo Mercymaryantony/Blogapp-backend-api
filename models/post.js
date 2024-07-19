@@ -6,7 +6,10 @@ const postSchema=Mongoose.Schema(
             ref:"users"
         },
         Message:String,
-        postedDate:Date
+        postedDate:{
+            type:Date,
+            default:Date.now
+        }
     }
 )
 var postModel=Mongoose.model("post",postSchema)
